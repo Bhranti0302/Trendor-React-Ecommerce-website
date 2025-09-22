@@ -4,6 +4,7 @@ import ProductItems from "./ProductItems";
 import { searchProducts } from "../../services/apiShop";
 import { useState } from "react";
 import ProductFilters from "./ProductFilter";
+import Footer from "../../components/Footer";
 
 function SearchResultsPage() {
   const products = useLoaderData();
@@ -23,27 +24,33 @@ function SearchResultsPage() {
   return (
     <div className="xl:mx-16">
       <Header />
-      <div className="my-16 px-4 sm:px-8 md:px-16 py-16 ">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Search Results</h2>
+      <main className="pt-[3rem] pb-[1rem]">
+        <div className=" px-4 sm:px-8 md:px-16 py-16 ">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8">
+            Search Results
+          </h2>
 
-        <ProductFilters onFilterChange={handleFilterChange} />
+          <ProductFilters onFilterChange={handleFilterChange} />
 
-        {products.length === 0 ? (
-          <p className="text-gray-500">No products found.</p>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
-                <ProductItems product={product} key={product.id} />
-              ))
-            ) : (
-              <p className="text-center col-span-full text-gray-500">
-                No products found.
-              </p>
-            )}
-          </div>
-        )}
-      </div>
+          {products.length === 0 ? (
+            <p className="text-gray-500">No products found.</p>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product) => (
+                  <ProductItems product={product} key={product.id} />
+                ))
+              ) : (
+                <p className="text-center col-span-full text-gray-500">
+                  No products found.
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="border footer-border"></div>
+        <Footer />
+      </main>
     </div>
   );
 }
