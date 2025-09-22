@@ -1,0 +1,179 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-heading: 3.5rem;
+
+  /*========== Colors ==========*/
+  --background-color: #fff;
+  --text-color: #000;
+
+  --black-color: #000;
+  --white-color: #fff;
+  --light--grey-color: #d9d9d9;
+  --grey-color: #625656;
+  --dark--grey-color: #383232;
+  --light--purple-color: #e887ee;
+  --purple-color: #6604bb;
+  --yellow-color: #fdcb26;
+  --med--yellow-color: #bd8305;
+  --dark--yellow-color: #8f4e04;
+  --lightest--blue-color: #81c3c7;
+  --blue-color: #0c8ddd;
+  --dark--blue-color: #08769e;
+  --green-color: #03ae64;
+  --dark--green-color: #066d3d;
+  --red-color: #f02d30;
+  --dark--red-color: #8d1403;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Josefin Sans", sans-serif;
+  --biggest-font: 4.3rem;
+  --med-font: 2.5rem;
+  --small-font: 1.5rem;
+  --smallest-font: 0.938rem;
+  --label-font: 1.625rem;
+  --title-font: 1.25rem;
+  --subtitle-font: 1rem;
+  --cta-font: 2.75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Dark Mode */
+/* Default body colors (light mode) */
+body {
+  --background-color: #fff;
+  --text-color: #151414;
+  --container-bg: #fff; /* light container background */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode */
+body.dark {
+  --background-color: #151414;
+  --text-color: #fff;
+  --container-bg: #1e1e1e; /* darker container background */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Light Mode */
+body.light {
+  --background-color: #fff;
+  --text-color: #151414;
+  --container-bg: #fff; /* light container background */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.footer-border {
+  border-top: 1px solid var(--footer-border);
+  transition: border-color 0.2s ease;
+}
+
+body.dark .footer-border {
+  border-top-color: #383232;
+}
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  /* You can add responsive font sizes here */
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+input,
+button,
+body {
+  font-family: var(--body-font);
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input,
+select {
+  outline: none;
+}
+
+h1,
+h2,
+h4 {
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+  line-height: 110%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1920px;
+  margin-inline: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== DARK MODE BUTTON STYLING ===============*/
+button.dark-toggle {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+button.dark-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
