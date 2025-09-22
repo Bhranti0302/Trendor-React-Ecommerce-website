@@ -42,7 +42,7 @@ import HomeDecorCategory, {
 } from "./features/collections/HomeDecorCategory";
 import GroceriesCategory, {
   groceriesLoader,
-} from "./features/collections/groceriesCategory";
+} from "./features/collections/GroceriesCategory";
 import ShoesCategory, {
   shoesLoader,
 } from "./features/collections/ShoesCategory";
