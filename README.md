@@ -92,4 +92,4 @@ Product data is powered by **DummyJSON API**, with a focus on responsive design 
 
 ## 📄 License
 
-This project is licensed under the **MIT License** – feel free to use, modify, and distribute.
+This project is licensed under the **MIT License** – Please don't copy project.
