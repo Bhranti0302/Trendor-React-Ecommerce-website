@@ -4,7 +4,7 @@ function ProductFilters({ onFilterChange }) {
       {/* Category Filter */}
       <select
         onChange={(e) => onFilterChange("category", e.target.value)} // ✅ FIXED
-        className="border rounded px-3 py-2"
+        className="border rounded px-3 py-2 text-black"
       >
         <option value="">All Categories</option>
         <option value="mens-shirts">Men's collection</option>
@@ -23,7 +23,7 @@ function ProductFilters({ onFilterChange }) {
       {/* Price Sort */}
       <select
         onChange={(e) => onFilterChange("price", e.target.value)} // ✅ FIXED
-        className="border rounded px-3 py-2"
+        className="border rounded px-3 py-2 text-black"
       >
         <option value="">Default</option>
         <option value="asc">Price: Low to High</option>
