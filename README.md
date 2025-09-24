@@ -23,7 +23,7 @@ Trendor lets you browse products, filter by category, manage your cart and wishl
 
 ## 🚀 Live Preview
 
-👉 **Deploy Link**: (https://trendor-react-ecommerce-website-34ygqd4en-bhranti0302s-projects.vercel.app/login)
+👉 **Deploy Link**: (https://trendor-react-ecommerce-website.vercel.app)
 
 ---
 
